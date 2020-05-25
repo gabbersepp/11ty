@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+{% include head.html %}
+<body>
+
+{% include header.html %}
+<main class="main">
+
+<header class="title">
+<a href="{{ page.url }}">
+<div class="center">
+<h2>{{ site.title }}</h2>
+</div>
+</a>
+</header>
+
+<article class="single">
+<header class="single-header">
+<h1>{{ title }}</h1>
+</header>
+<section class="single-content">
+{{ content }}
+</section>
+</article>
+
+<div class="center">
+<form method="get" action="https://google.com/search" target="_blank">
+<input class="search" type="hidden" name="q" value="site:angora.me">
+<input id="search" class="search" type="text" name="q" placeholder="Search? Type And Enter!">
+<label for="search" class="hollow">_</label>
+</form>
+</div>
+
+<div class="pagination">
+<a class="prev" href="{% if prevPost.url %}{{ prevPost.uro }}{% endif %}">« Prev</a>
+<div id="mode">
+<div id="darkBtn">☀</div>
+<div id="lightBtn" class="hidden">☀</div>
+</div>
+<a class="next" href="{% if nextPost.url %}{{ nextPost.url }}{% endif %}">Next »</a>
+</div>
+
+</main>
+
+{% include footer.html %}
+<script defer src="{{ site.baseurl }}/script.js"></script>
+
+</body>
+
+</html>
