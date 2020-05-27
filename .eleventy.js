@@ -4,17 +4,17 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addLayoutAlias("page", "page.html");
   eleventyConfig.addLayoutAlias("single", "single.html");
 
-  eleventyConfig.addPassthroughCopy("content");
-  eleventyConfig.addPassthroughCopy({ "content": "/" });
+  //eleventyConfig.addPassthroughCopy("content");
+  //eleventyConfig.addPassthroughCopy({ "content": "/" });
   eleventyConfig.addPassthroughCopy("static");
   eleventyConfig.addPassthroughCopy({ "static": "/" });
 
-  eleventyConfig.addCollection("blog", (collection) => {
-    return collection.getFilteredByGlob("blog/*.md");});
-  eleventyConfig.addCollection("poem", (collection) => {
-    return collection.getFilteredByGlob("poem/**/*.md");});
-  eleventyConfig.addCollection("quote", (collection) => {
-    return collection.getFilteredByGlob("quote/*.md");});
+  //eleventyConfig.addCollection("blog", (collection) => {
+  //  return collection.getFilteredByGlob("content/blog/blog-posts/*.md");});
+  //eleventyConfig.addCollection("poem", (collection) => {
+  //  return collection.getFilteredByGlob("content/poem/**/*.md");});
+  //eleventyConfig.addCollection("quote", (collection) => {
+  //  return collection.getFilteredByGlob("content/quote/*.md");});
 
   const options = {
     html: true,

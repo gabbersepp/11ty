@@ -1,5 +1,0 @@
-{
-  "tags": "blog",
-  "layout": "single",
-  "permalink": "/{{ title | slug }}/"
-}

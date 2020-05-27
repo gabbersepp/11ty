@@ -1,12 +1,14 @@
+---
 title: Blog
 layout: list
+permalink: "/blog/page-{{ pagination.pageNumber }}.html"
 pagination:
   size: 2
-  alias: blog
+  alias: blogs
   data: collections.blog
 ---
 
-{% for blog in blog %}
+{% for blog in blogs %}
 <article class="list">
 <a href="{{ blog.url }}">
 <header class="list-header">
